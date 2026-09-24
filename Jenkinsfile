@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'master, url: 'https://github.com/dhishanthmunees/CI-CD_project.git'
+                git branch: 'master', url: 'https://github.com/dhishanthmunees/CI-CD_project.git'
             }
         }
 
