@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
         IMAGE_NAME = "dhish01/devops-cicd-app"
-        DEPLOY_SERVER = "ubuntu@13.60.47.78"
+        DEPLOY_SERVER = "ubuntu@16.171.194.154"
     }
 
     stages {
