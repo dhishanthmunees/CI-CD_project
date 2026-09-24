@@ -2,7 +2,7 @@
 
 A fully automated CI/CD pipeline that builds, containerizes, and deploys a Node.js web app to AWS EC2 — triggered automatically on every GitHub push.
 
-**Live demo (when instances are running):** `http://16.171.194.154:3000`
+**Live demo:** `http://16.171.194.154:3000`
 
 
 
