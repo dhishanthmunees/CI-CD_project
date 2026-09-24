@@ -35,7 +35,7 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                sshagent(['deploy-server-ssh']) {
+                sshagent(['deploy-server']) {
                     sh """
                         ssh -o StrictHostKeyChecking=no ${DEPLOY_SERVER} '
                             docker pull ${IMAGE_NAME}:latest &&
