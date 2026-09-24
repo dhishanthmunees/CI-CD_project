@@ -4,7 +4,8 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
         IMAGE_NAME = "dhish01/devops-cicd-app"
-        DEPLOY_SERVER = "ubuntu@16.171.194.154"
+        DEPLOY_HOST = "16.171.194.154"
+        DEPLOY_SERVER = "ubuntu@${DEPLOY_HOST}"
     }
 
     stages {
@@ -50,7 +51,7 @@ pipeline {
 
         stage('Health Check') {
             steps {
-                sh "sleep 5 && curl -f http://YOUR_DEPLOY_SERVER_PUBLIC_IP:3000/health || exit 1"
+                sh "sleep 5 && curl -f http://${DEPLOY_HOST}:3000/health || exit 1"
             }
         }
     }
